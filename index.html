@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L&Y</title>
+    <link rel="stylesheet" href="surprise_style.css">
+</head>
+<body>
+    <div class="container2">
+        <h2><span>We have been together for</span>Jan 23</h2>
+        <div class="countdown">
+            <div id="day">NA</div>
+            <div id="hour">NA</div>
+            <div id="minute">NA</div>
+            <div id="second">NA</div>
+        </div>
+
+    </div>
+    <div class="container2">
+        <h1>My ToDoList with you</h1>
+        <div class="t_container">
+            <div class="box">
+                <h3>想一起看的电影</h3>
+                <div class="box2"><span>招魂</span></div>
+                <div class="box2">怦然心动</div>
+                <div class="box2">NA</div>
+                <div class="box2">NA</div>
+                <div class="box2">NA</div>
+
+            </div>
+            <div class="box">
+                <h3>想一起去的地方</h3>
+                <div class="box2"><span>电影院</span></div>
+                <div class="box2">水族馆</div>
+                <div class="box2">游乐园</div>
+                <div class="box2">博物馆</div>
+                <div class="box2">鬼屋</div>
+            </div>
+            <div class="box">
+                <h3>想一起做的事情</h3>
+                <div class="box2"><span>手牵手散步</span></div>
+                <div class="box2"><span>撑一把伞</span></div>
+                <div class="box2">一起做甜品</div>
+                <div class="box2">看烟花</div>
+                <div class="box2">要一直在一起</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <h1>Big Days</h1>
+        <p>11.25 开始学习打卡/绝对没有居心不良！</p>
+        <p>12.31 元旦礼物/失败的surprise</p>
+        <p>1.8 一起去骑车/好累qwq但是超开心的</p>
+        <p>1.9 也许算是非正式表白</p>
+        <p>1.15 收到了超棒的生日礼物/牛轧糖好好吃</p>
+        <p>1.17 连麦看了恐怖片/云同桌的开端</p>
+        <p>1.23 看电影 抓娃娃 吃日料 表白 成功牵手///要素过多</p>
+        <p>1.27 第一次在雨中散步</p>
+        <p><span>未完待续</span></p>
+
+    </div>
+
+    <div class="container2">
+        <h2><span>写在最后的话</span></h2>
+        <div class="text-part">
+            <p>嘿嘿嘿，之前说的秘密就是这个，不知道你喜不喜欢（我的设计水平也就这样了哈哈哈哈 好像有点简陋）。虽然计时器的设计参考了一下教程，但是所有代码都是手敲的哦/快夸我！</p>
+            <p>唔，part2那个ToDoList一直在纠结写什么比较好，网上搜了一堆情侣清单/啊有点羞耻，最后选了几个看起来比较有可行性的放上去。不过和你在一起做什么都很美好呀。</p>
+            <p>aaa可恶不知道写什么了 这里怎么这么空！我是不是应该把字放大一点点。</p>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var countDate= new Date('Jan 23,2021 00:00:00').getTime();
+
+        function newYear() {
+            var now=new Date().getTime();
+                gap=now - countDate;
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+
+            var d=Math.floor(gap / (day));
+            var h=Math.floor((gap % (day))/(hour));
+            var m=Math.floor((gap % (hour))/(minute));
+            var s=Math.floor((gap % (minute))/(second));
+
+            document.getElementById('day').innerText=d;
+            document.getElementById('hour').innerText=h;
+            document.getElementById('minute').innerText=m;
+            document.getElementById('second').innerText=s;
+
+
+
+        }
+        setInterval(function () {
+            newYear();
+        },1000)
+    </script>
+</body>
+</html>
